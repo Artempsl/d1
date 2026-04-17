@@ -1,7 +1,7 @@
 def respond_to_radio_check(message: str) -> str:
     """Return an acknowledgement to a radio-check style message."""
     normalized = message.strip().lower()
-    if normalized == "прием. слышно меня?":
+    if normalized in {"прием. слышно меня?", "раз два три четыре пять"}:
         return "Да, слышно."
     return "Сообщение получено."
 
